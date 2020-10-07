@@ -1,18 +1,14 @@
-package space.devport.wertik.inventoryevents.event;
+package pro.dracarys.inventoryevents.event;
 
-import lombok.Getter;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.Inventory;
-import org.jetbrains.annotations.NotNull;
 
 public class PlayerInventoryEvent extends Event {
 
-    @Getter
     private final Player player;
 
-    @Getter
     private final Inventory inventory;
 
     private static final HandlerList handlerList = new HandlerList();
@@ -22,8 +18,16 @@ public class PlayerInventoryEvent extends Event {
         this.inventory = inventory;
     }
 
+    public Player getPlayer() {
+        return player;
+    }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
     @Override
-    public @NotNull HandlerList getHandlers() {
+    public HandlerList getHandlers() {
         return handlerList;
     }
 

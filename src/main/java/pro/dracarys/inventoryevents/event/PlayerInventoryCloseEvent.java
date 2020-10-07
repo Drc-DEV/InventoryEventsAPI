@@ -1,4 +1,4 @@
-package space.devport.wertik.inventoryevents.event;
+package pro.dracarys.inventoryevents.event;
 
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
