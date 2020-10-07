@@ -50,7 +50,7 @@ public class InventoryEventAPI {
                     @Override
                     public void onPacketSending(PacketEvent event) {
                         if (event.getPacketType() ==
-                                PacketType.Play.Client.CLOSE_WINDOW) {
+                                PacketType.Play.Server.OPEN_WINDOW) {
                             Bukkit.getScheduler().runTask(plugin, () -> Bukkit.getPluginManager().callEvent(new PlayerInventoryOpenEvent(event.getPlayer(), event.getPlayer().getInventory())));
                         }
                     }
