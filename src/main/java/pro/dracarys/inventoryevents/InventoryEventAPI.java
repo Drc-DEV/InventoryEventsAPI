@@ -37,7 +37,7 @@ public class InventoryEventAPI {
                 new PacketAdapter(plugin, ListenerPriority.NORMAL,
                         PacketType.Play.Client.CLOSE_WINDOW) {
                     @Override
-                    public void onPacketSending(PacketEvent event) {
+                    public void onPacketReceiving(PacketEvent event) {
                         if (event.getPacketType() ==
                                 PacketType.Play.Client.CLOSE_WINDOW) {
                             Bukkit.getScheduler().runTask(plugin, () -> Bukkit.getPluginManager().callEvent(new PlayerInventoryCloseEvent(event.getPlayer(), event.getPlayer().getInventory())));
